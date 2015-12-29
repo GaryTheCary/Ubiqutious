@@ -1,0 +1,56 @@
+head
+	title Ubiqutious
+	meta(name="mobile-web-app-capable" content="yes")
+	meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+
+
+template(name="main")
+	body
+		+header
+
+template(name="header")
+	//- .bicolorsection
+	//- 	.spaceholder
+	//- 	+logo
+	+music_steaming
+
+
+
+template(name="logo")
+	.logoholder
+		.fontholder LOVE MACHINE
+		.formholder
+			form(class="ui center form" id="getoptions")
+				div(class="field")
+					select(class="ui dropdown" id="optionsavailable" name="optionsavailable")
+						option(value="") Options
+						option(value="crush") crush
+						option(value="firstdate") first date
+						option(value="propose") propose
+						option(value="married") married
+						option(value="fight") fight
+						option(value="atlast") at last	
+				button(class="mini ui yellow button" type="submit" id="btn" value="post") GO
+		#display
+
+template(name="music_steaming")
+	.container
+		.sub_contain
+			.ui.card
+				.content
+					.right.floated.meta 
+						p You Belong With Me
+					img(class="ui avatar image" src="/assets/talyor.jpg") 
+					label Taylor Swift
+				.image
+					img(src="/assets/talyor.jpg")
+					audio(preload="auto" id="taylor" src="/assets/Taylor Swift-You Belong With Me.mp3")			
+				.content
+					span(class="right floated")
+						i(class="pause icon" id="pause")
+						label pause
+						i(class="stop icon" id="stop")
+						label stop
+					i(class="play icon" id="play")
+					label play	 		
+
